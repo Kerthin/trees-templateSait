@@ -1,0 +1,82 @@
+.sunflower {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 326px;
+	height: 642px;
+
+	.rod {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 4px;
+		height: 100%;
+		background-color: #000;
+
+		.halo {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 210px;
+			height: 210px;
+			border-radius: 50%;
+			background-color: #000;
+
+			.head {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 118px;
+				height: 118px;
+				border-radius: 50%;
+				background-color: #de162a;
+			}
+		}
+
+		.brunch {
+			position: absolute;
+			top: 300px;
+			width: 183px;
+			height: 4px;
+			background-color: #000;
+
+			&._left {
+				left: -116px;
+			}
+
+			&._right {
+				left: -63px;
+			}
+
+			@mixin marginNumberMix($number, $marginTop) {
+				&._position_#{$number} {
+					top: #{$marginTop}px;
+				}
+			}
+			@include marginNumberMix(1, 270);
+			@include marginNumberMix(2, 358);
+			@include marginNumberMix(3, 446);
+
+			.sheet {
+				position: absolute;
+				bottom: 0;
+				width: 90px; 
+				height: 67px;
+				background: #000;
+				border-radius: 50% 100px 0 80px;
+
+				&._left {
+					left: -45px;
+					border-radius: 50% 100px 0 80px;
+				}
+
+				&._right {
+					right: -45px;
+					border-radius: 100px 50% 80px 0;
+				}
+			}
+		}
+	}
+}

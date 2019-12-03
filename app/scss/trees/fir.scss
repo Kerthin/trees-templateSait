@@ -1,0 +1,239 @@
+.fir {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 554px;
+	height: 850px;
+
+	.centerRod {
+		position: absolute;
+		left: 290px;
+		width: 4px;
+		height: 804px;
+		background-color: #000;
+
+		.sideRods {
+			position: absolute;
+			top: 52px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 368px;
+			height: 663px;
+			border: 4px solid #000;
+			border-bottom-right-radius: 280px;
+			border-top: 0;
+		}
+
+		.centerRod__basis {
+			position: absolute;
+			top: 662px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 72px;
+			height: 72px;
+			border-radius: 50%;
+		}
+
+		.angleLeftRod {
+			position: absolute;
+			top: 690px;
+			right: 0;
+			width: 110px;
+			height: 90px;
+			border: 4px solid #000;
+			border-top: 0;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 70px;
+
+			.angleLeftRod__leftBtunch {
+				position: absolute;
+				top: -74px;
+				left: -4px;
+				width: 4px;
+				height: 74px;
+				background-color: #000;
+			}
+		}
+
+		.angleRightRod {
+			position: absolute;
+			top: 690px;
+			width: 100px;
+			height: 40px;
+			border: 4px solid #000;
+			border-top: 0;
+			border-bottom-left-radius: 70px;
+			border-bottom-right-radius: 20px;
+
+			.angleLeftRod__rightBtunch {
+				position: absolute;
+				top: -620px;
+				right: -4px;
+				width: 4px;
+				height: 620px;
+				background-color: #000;
+			}
+		}
+
+		.kernel {
+			position: absolute;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+
+			&._centered {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&._bottom {
+				bottom: -19px;
+			}
+
+			&._bottomR {
+				bottom: -19px;
+				left: -19px;
+			}
+		}
+
+		.roots {
+			position: absolute;
+			bottom: -280px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 280px;
+			height: 280px;
+			border: 4px solid #000;
+			border-radius: 50%;
+			border-top-color: #000;
+			border-bottom-color: transparent;
+			border-left-color: transparent;
+			border-right-color: transparent;
+		}
+	}
+
+	.sideRods__crownsWrap {
+		position: absolute;
+		height: 554px;
+		width: 222px;
+
+		&._centerCW {
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&._leftCW {
+			left: -2px;
+			transform: translateX(-50%);
+		}
+
+		&._rightCW {
+			top: 5px;
+			right: -2px;
+			transform: translateX(50%);
+		}
+	}
+
+	.crown {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 0 0 50% 50% / 0 0 100% 100%;
+		background-color: #000;
+
+		&._margin_rightCW {
+			left: 0%;
+			transform: translate(0%);
+		}
+
+		@mixin crownsNumberMix($crownNumber, $marginTop, $width, $height) {
+			&._#{$crownNumber} {
+				top: #{$marginTop}px;
+				width: #{$width}px;
+				height: #{$height}px;
+			}
+		}
+		@include crownsNumberMix(1, 18, 34, 8);
+		@include crownsNumberMix(2, 66, 61, 11);
+		@include crownsNumberMix(3, 116, 71, 13);
+		@include crownsNumberMix(4, 165, 84, 15);
+		@include crownsNumberMix(5, 214, 100, 18);
+		@include crownsNumberMix(6, 256, 116, 21);
+		@include crownsNumberMix(7, 304, 136, 25);
+		@include crownsNumberMix(8, 357, 160, 28);
+		@include crownsNumberMix(9, 426, 190, 34);
+		@include crownsNumberMix(10, 514, 222, 40);
+
+		&._1 {
+			&._margin_rightB {
+				top: calc(18px + 50px);
+			}
+		}
+		&._2 {
+			&._margin_rightB {
+				top: calc(66px + 50px);
+			}
+		}
+		&._3 {
+			&._margin_rightB {
+				top: calc(116px + 50px);
+			}
+		}
+		&._9 {
+			&._margin_rightCW {
+				left: 1px;
+			}
+		}
+		&._10 {
+			&._margin_rightCW {
+				left: -55px;
+			}
+		}
+	}
+
+	.constellation {
+		position: absolute;
+		top: -50px;
+		right: -20px;
+		width: 126px;
+		height: 95px;
+
+		.line {
+			position: relative;
+			margin-top: 45.5px;
+			width: 126px;
+			height: 4px;
+			background-color: #000;
+
+			.star {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				border-radius: 50%;
+
+				&._small {
+					width: 18px;
+					height: 18px;
+				}
+				&._big {
+					left: 25px;
+					width: 37px;
+					height: 37px;
+				}
+			}
+		}
+
+		.moon {
+			position: absolute;
+			top: 0;
+			right: 44px;
+			width: 95px; 
+			height: 95px; 
+			border-radius: 50%;
+			box-shadow: 20px 20px 0 0 #000;
+			transform: rotate(-45deg);
+		}
+	}
+}

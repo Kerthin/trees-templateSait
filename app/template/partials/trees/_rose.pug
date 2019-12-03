@@ -1,0 +1,13 @@
+.rose
+	.rod
+		.pollen
+		.bud
+		mixin padsMix(padSide, positionNumber, brunchSide)
+			.pad(class=`_${padSide} _position_${positionNumber}`)
+				.pad__brunch(class=`_${brunchSide}`)
+					.brunchCircle
+		+padsMix('left', '1', 'right')
+		+padsMix('right', '2', 'left')
+		+padsMix('left', '3', 'right')
+		+padsMix('right', '4', 'left')
+		+padsMix('left', '5', 'right')

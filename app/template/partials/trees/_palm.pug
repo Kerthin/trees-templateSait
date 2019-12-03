@@ -1,0 +1,28 @@
+.palm
+	mixin palmRodMix(sizeName, kernelColor)
+		.rod(class=`_${sizeName}`)
+			.crown(class=`_${sizeName}`)
+				.kernel(class=`_bg_${kernelColor}`)
+	+palmRodMix('sm', 'red')
+	+palmRodMix('xl', 'black')
+	+palmRodMix('xm', 'red')
+	+palmRodMix('xs', 'black')
+	+palmRodMix('md', 'black')
+	.rod._lg
+		.crown._lg
+			.kernel._bg_red
+		.leftBrunch
+			.wave._left
+				.wave._right._top
+					.wave._left._top
+						.wave._right._top
+							.wave._left._top
+								.wave__topBrunch
+									.crown._cup
+										mixin arcMix(sizeName, side, circleColor)
+											.arc(class=`_${sizeName} _${side}`)
+												.arc__circle(class=`_bg_${circleColor}`)
+										+arcMix('lg', 'left', 'red')
+										+arcMix('sm', 'left', 'black')
+										+arcMix('sm', 'right', 'red')
+										+arcMix('lg', 'right', 'black')

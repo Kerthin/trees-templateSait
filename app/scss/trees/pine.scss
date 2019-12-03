@@ -1,0 +1,177 @@
+.pine {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 456px;
+	height: 884px;
+
+	.leftRod {
+		position: absolute;
+		bottom: 0;
+		left: 262px;
+		width: 19px;
+		height: 410px;
+		border: 4px solid #000;
+		border-top-left-radius: 70px;
+		border-bottom: 0;
+		border-right: 0;
+
+		.leftRod__rightBrunch {
+			position: absolute;
+			top: -41px;
+			right: -101px;
+			width: 101px;
+			height: 41px;
+			border: 4px solid #000;
+			border-bottom-right-radius: 70px;
+			border-top: 0;
+			border-left: 0;
+
+			._position_1 {
+				top: -77px;
+				left: 23px;
+			}
+		}
+	}
+
+	.centerRod {
+		position: absolute;
+		left: 277px;
+		width: 4px;
+		height: 100%;
+		background-color: #000;
+
+		@mixin treeBrunchMix($brunchName, $marginBottom, $marginRight, $width, $height, $leftRadius, $rightRadius, $borderLeft, $borderRight, $positionNumber, $positionTop, $positionLeft, $positionRight) {
+			.centerRod__#{$brunchName}Brunch {
+				position: absolute;
+				bottom: #{$marginBottom}px;
+				right: #{$marginRight};
+				width: #{$width}px;
+				height: #{$height}px;
+				border: 4px solid #000;
+				border-bottom-left-radius: #{$leftRadius}px;
+				border-bottom-right-radius: #{$rightRadius}px;
+				border-top: 0;
+				border-left: #{borderLeft};
+				border-right: #{borderRight};
+
+				._position_#{$positionNumber} {
+					top: #{$positionTop}px;
+					left: #{$positionLeft}px;
+					right: #{$positionRight}px;
+				}
+			}
+		}
+
+		@include treeBrunchMix(bottomLeft, 473, 0, 90, 47, 70, '', '', 0, 3, -61, -63, '');
+		@include treeBrunchMix(bottomRight, 558, '', 95, 40, '', 70, 0, '', 4, -61, '', -63);
+		@include treeBrunchMix(topLeft, 609, 0, 83, 47, 70, '', '', 0, 5, -50, -51, '');
+		@include treeBrunchMix(topRight, 690, '', 88, 39, '', 70, 0, '', 6, -50, '', -51);
+
+		._position_7 {
+			bottom: 791px;
+			left: -37px;
+		}
+	}
+
+	.rightRod {
+		position: absolute;
+		bottom: 0;
+		left: 262px;
+		width: 40px;
+		height: 327px;
+		border: 4px solid #000;
+		border-top-right-radius: 70px;
+		border-bottom: 0;
+		border-left: 0;
+
+		.rightRod__leftBrunch {
+			position: absolute;
+			top: -47px;
+			left: -84px;
+			width: 84px;
+			height: 47px;
+			border: 4px solid #000;
+			border-bottom-left-radius: 70px;
+			border-top: 0;
+			border-right: 0;
+
+			._position_2 {
+				top: -77px;
+				right: 6px;
+			}
+
+			.crown__leftBrunch {
+				position: absolute;
+				top: 0;
+				left: -104px;
+				width: 104px;
+				height: 4px;
+			}
+		}
+	}
+
+	.circle {
+		position: absolute;
+		top: -22px;
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+	}
+
+	.crown {
+		position: absolute;
+		border-radius: 0 0 50% 50% / 0 0 100% 100%;
+
+		.basisBrunch {
+			position: absolute;
+			width: 4px;
+			height: 50%;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #000;
+		}
+
+		.centerBrunch {
+			position: absolute;
+			top: -53px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 4px;
+			height: 53px;
+			background-color: #000;
+
+			.centerBrunch__leftBrunch {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 166px;
+				height: 4px;
+			}
+		}
+
+		@mixin crownSizeMix($sizeName, $sizeWidth, $sizeHeight, $kernelWidth) {
+			&._#{$sizeName} {
+				width: #{$sizeWidth}px;
+				height: #{$sizeHeight}px;
+
+				.kernel {
+					width: #{$kernelWidth}px;
+				}
+			}
+		}
+
+		@include crownSizeMix(lg, 152, 77, 76);
+		@include crownSizeMix(md, 122, 61, 61);
+		@include crownSizeMix(sm, 98, 50, 49);
+		@include crownSizeMix(xs, 78, 40, 39);
+
+		.kernel {
+			margin: 0 auto;
+			height: 50%;
+			border-radius: 0 0 50% 50% / 0 0 100% 100%;
+		}
+	}
+}

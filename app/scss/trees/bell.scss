@@ -1,0 +1,113 @@
+.bell {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 218px;
+	height: 866px;
+
+	.crown {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 134px;
+		height: 24px;
+		border-radius: 0 0 50% 50% / 0 0 100% 100%;
+		background-color: #000;
+
+		@mixin marginNumberMix($number, $marginTop) {
+			&._position_#{$number} {
+				top: #{$marginTop}px;
+			}
+		}
+		@include marginNumberMix(1, 138);
+		@include marginNumberMix(2, 208);
+		@include marginNumberMix(3, 278);
+		@include marginNumberMix(4, 348);
+		@include marginNumberMix(5, 418);
+		@include marginNumberMix(6, 488);
+		@include marginNumberMix(7, 558);
+		@include marginNumberMix(8, 628);
+		@include marginNumberMix(9, 698);
+
+		.crown__rod {
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 4px;
+			height: 30px;
+			background-color: #000;
+
+			.arc {
+				position: absolute;
+				top: -40px;
+				width: 98px;
+				height: 44px;
+				border: 4px solid #000;
+				border-top: 0;
+
+				&._left {
+					right: 0;
+					border-bottom-left-radius: 50px;
+					border-right: 0;
+
+					.tongue {
+						left: -16px;
+					}
+				}
+				&._right {
+					border-bottom-right-radius: 50px;
+					border-left: 0;
+
+					.tongue {
+						right: -16px;
+					}
+				}
+
+				.arc__rightBrunch {
+					width: 94px;
+					height: 4px;
+					background-color: #000;
+
+					.tongue {
+						left: 74px;
+					}
+				}
+
+				.arc__circleBrunch {
+					position: absolute;
+					top: -124px;
+					width: 98px;
+					height: 124px;
+					border: 4px solid #000;
+					border-top-right-radius: 100px;
+					border-bottom: 0;
+					border-left: 0;
+
+					.tongue {
+						left: -16px;
+					}
+				}
+
+				.tongue {
+					position: absolute;
+					top: -15px;
+					width: 28px;
+					height: 28px;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.crown__leg {
+			position: absolute;
+			bottom: -144px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 4px;
+			height: 144px;
+			background-color: #000;
+		}
+	}
+}

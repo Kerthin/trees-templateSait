@@ -1,0 +1,160 @@
+.poplar {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 289px;
+	height: 851px;
+
+	.rod {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 4px;
+		height: 100%;
+		background-color: #000;
+
+		.circle {
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background-color: #000;
+
+			&._center {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			&._center_v {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&._bottom {
+				bottom: 118px;
+			}
+			&._left {
+				left: -12px;
+			}
+			&._right {
+				right: -12px;
+			}
+		}
+
+		.rod__arc {
+			position: absolute;
+			left: -61px;
+			width: 125px;
+			height: 125px;
+			border-radius: 50%;
+			border: 4px solid #000;
+			transform: rotate(45deg);
+
+			&._top {
+				top: 10px;
+				border-bottom-color: transparent;
+				border-right-color: transparent;
+			}
+
+			&._bottom {
+				bottom: 128px;
+				border-top-color: transparent;
+				border-left-color: transparent;
+			}
+		}
+
+		.rod__basis {
+			position: absolute;
+			top: 326px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			background-color: #de162a;
+
+			.brunch {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 41px;
+				height: 4px;
+				background-color: #000;
+
+				&._left {
+					left: -41px;
+				}
+				&._right {
+					right: -41px;
+				}
+
+				.brunch__trunk {
+					position: absolute;
+					width: 4px;
+					height: 62px;
+					background-color: #000;
+
+					&._top {
+						bottom: 0;
+					}
+					&._right {
+						right: 0
+					}
+				}
+			}
+		}
+	}
+	.crownsWrap {
+		position: absolute;
+		width: 121px;
+		height: 239px;
+
+		&._top {
+			top: 72px;
+		}
+		&._bottom {
+			bottom: 181px;
+		}
+		&._left {
+			.crown {
+				right: 0;
+			}
+		}
+		&._right {
+			right: 0;
+		}
+
+		.crown {
+			position: absolute;
+			border-radius: 0 0 50% 50% / 0 0 100% 100%;
+			background-color: #000;
+
+			@mixin sizeNumberMix($number, $width, $height) {
+				&._size_#{$number} {
+					width: #{$width}px;
+					height: #{$height}px;
+				}
+			}
+			@include sizeNumberMix(1, 74, 13);
+			@include sizeNumberMix(2, 80, 14);
+			@include sizeNumberMix(3, 87, 16);
+			@include sizeNumberMix(4, 94, 17);
+			@include sizeNumberMix(5, 100, 18);
+			@include sizeNumberMix(6, 107, 19);
+			@include sizeNumberMix(7, 114, 20);
+			@include sizeNumberMix(8, 121, 22);
+
+			@mixin marginNumberMix($number, $marginTop) {
+				&._position_#{$number} {
+					top: #{$marginTop}px;
+				}
+			}
+			@include marginNumberMix(2, 31);
+			@include marginNumberMix(3, 62);
+			@include marginNumberMix(4, 93);
+			@include marginNumberMix(5, 124);
+			@include marginNumberMix(6, 155);
+			@include marginNumberMix(7, 186);
+			@include marginNumberMix(8, 217);
+		}
+	}
+}

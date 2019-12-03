@@ -1,0 +1,29 @@
+.seedling
+	.rod
+		.circle._xl._bg_black._xl_margin
+		.circle._lg_rod._bg_black
+		.circle._md_rod._bg_black
+		.circle._sm_rod._bg_black
+		.circle._xs_rod._bg_red
+		.circle._xl_arc._bg_black
+		.circle._lg_arc._bg_black
+		.circle._xm_arc._bg_black
+		.circle._md_arc._bg_black
+		.circle._sm_arc._bg_black
+		.circle._xs_arc._bg_black
+		mixin numberBasisMix(numberSizeBasis, borderStyle)
+			.basis._left._bs_dash(class=`_left_${numberSizeBasis} _bs_${borderStyle}`)
+			.basis._right._bs_dot(class=`_right_${numberSizeBasis}`)
+		+numberBasisMix('1')
+		+numberBasisMix('2')
+		+numberBasisMix('3')
+		+numberBasisMix('4')
+		+numberBasisMix('5')
+		+numberBasisMix('6', 'solid')
+		+numberBasisMix('7', 'solid')
+		+numberBasisMix('8', 'solid')
+		.circle._bCircle._bg_red._b_circle_margin_1
+		.circle._bCircle._bg_black._b_circle_margin_2
+		.circle._bCircle._bg_black._b_circle_margin_3
+		.legs
+	.arc

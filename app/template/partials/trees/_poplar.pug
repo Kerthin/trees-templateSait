@@ -1,0 +1,27 @@
+.poplar
+	.rod
+		.circle._center
+		.circle._bottom._center
+		.rod__arc._top
+		.rod__arc._bottom
+		.rod__basis
+			.brunch._left
+				.circle._left._center_v
+				.brunch__trunk
+			.brunch._right
+				.circle._right._center_v
+				.brunch__trunk._top._right
+	mixin crownsWrapMix(vSide, hSide, s1, s2, s3, s4, s5, s6, s7, s8)
+		.crownsWrap(class=`_${vSide} _${hSide}`)
+			.crown(class=`_size_${s1}`)
+			.crown._position_2(class=`_size_${s2}`)
+			.crown._position_3(class=`_size_${s3}`)
+			.crown._position_4(class=`_size_${s4}`)
+			.crown._position_5(class=`_size_${s5}`)
+			.crown._position_6(class=`_size_${s6}`)
+			.crown._position_7(class=`_size_${s7}`)
+			.crown._position_8(class=`_size_${s8}`)
+	+crownsWrapMix('top', 'left', 1, 2, 3, 4, 5, 6, 7, 8)
+	+crownsWrapMix('top', 'right', 1, 2, 3, 4, 5, 6, 7, 8)
+	+crownsWrapMix('bottom', 'left', 8, 7, 6, 5, 4, 3, 2, 1)
+	+crownsWrapMix('bottom', 'right',  8, 7, 6, 5, 4, 3, 2, 1)

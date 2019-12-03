@@ -1,0 +1,50 @@
+.menu {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: -100%;
+	background-color: #f1eee2;
+	transition: 1s;
+	z-index: 10;
+
+	&.popup {
+		top: 0;
+		transition-delay: .2s;
+	}
+
+	.menu__item {
+		float: left;
+		width: 25%;
+		height: 33.333333333%;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		transition: .3s;
+
+		&:hover {
+			transform: scale(.9);
+		}
+
+		&.active {
+			background-color: #e0dabf;
+		}
+
+		@mixin menuItemBgMix($itemBg) {
+			&._#{$itemBg} {
+				background-image: url(#{$itemBgPath}/#{$itemBg}.png);
+			}
+		}
+		@include menuItemBgMix(seedling);
+		@include menuItemBgMix(sepal);
+		@include menuItemBgMix(linden);
+		@include menuItemBgMix(pine);
+		@include menuItemBgMix(palm);
+		@include menuItemBgMix(fir);
+		@include menuItemBgMix(rose);
+		@include menuItemBgMix(willow);
+		@include menuItemBgMix(sunflower);
+		@include menuItemBgMix(bell);
+		@include menuItemBgMix(poplar);
+	}
+}

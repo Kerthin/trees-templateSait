@@ -1,0 +1,29 @@
+.bell
+	.crown._position_1
+		.crown__rod
+			.arc._left
+				.tongue._bg_red
+				.arc__rightBrunch
+					.tongue._bg_black
+	.crown._position_2
+		.crown__rod
+			.arc._right
+				.tongue._bg_black
+				.arc__circleBrunch
+					.tongue._bg_red
+	mixin crownsMix(number, arcSide)
+		.crown(class=`_position_${number}`)
+			.crown__rod
+				.arc(class=`_${arcSide}`)
+					.tongue._bg_red
+	+crownsMix('3', 'left')
+	+crownsMix('4', 'right')
+	+crownsMix('5', 'left')
+	+crownsMix('6', 'right')
+	+crownsMix('7', 'left')
+	+crownsMix('8', 'right')
+	.crown._position_9
+		.crown__rod
+			.arc._left
+				.tongue._bg_red
+		.crown__leg

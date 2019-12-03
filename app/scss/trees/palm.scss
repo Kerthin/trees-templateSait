@@ -1,0 +1,164 @@
+.palm {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 610px;
+	height: 893px;
+
+	.rod {
+		position: absolute;
+		bottom: 0;
+		width: 4px;
+		background-color: #000;
+
+		@mixin sizeRodMix($sizeName, $leftMargin, $height) {
+			&._#{$sizeName} {
+				left: #{$leftMargin}px;
+				height: #{$height}px;
+			}
+		}
+		@include sizeRodMix(sm, 498, 535);
+		@include sizeRodMix(xl, 458, 848);
+		@include sizeRodMix(xm, 404, 680);
+		@include sizeRodMix(xs, 362, 436);
+		@include sizeRodMix(md, 290, 592);
+		@include sizeRodMix(lg, 240, 776);
+
+		.crown {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 0 0 50% 50% / 0 0 100% 100%;
+			background-color: #000;
+
+			@mixin sizeCrownMix($sizeName, $width, $height) {
+				&._#{$sizeName} {
+					width: #{$width}px;
+					height: #{$height}px;
+				}
+			}
+			@include sizeCrownMix(xs, 194, 35);
+			@include sizeCrownMix(sm, 218, 40);
+			@include sizeCrownMix(md, 254, 45);
+			@include sizeCrownMix(xm, 248, 44);
+			@include sizeCrownMix(lg, 263, 46);
+			@include sizeCrownMix(xl, 292, 52);
+			@include sizeCrownMix(cup, 118, 59);
+
+			.kernel {
+				position: absolute;
+				top: -46px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+			}
+
+			.arc {
+				position: absolute;
+				top: -85px;
+				height: 100px;
+				border: 4px solid;
+				
+				&._lg {
+					width: 59px;
+
+					&._left {
+						left: 0;
+						border-bottom-left-radius: 100px;
+						border-top: 0;
+						border-right: 0;
+					}
+					&._right {
+						right: 0;
+						border-bottom-right-radius: 100px;
+						border-top: 0;
+						border-left: 0;
+					}
+				}
+
+				&._sm {
+					width: 24px;
+
+					&._left {
+						left: 35px;
+						border-bottom-left-radius: 100px;
+						border-top: 0;
+						border-right: 0;
+					}
+					&._right {
+						right: 35px;
+						border-bottom-right-radius: 100px;
+						border-top: 0;
+						border-left: 0;
+					}
+				}
+
+				&._lg,
+				&._sm {
+					&._left {
+						.arc__circle {
+							left: -15px;
+						}
+					}
+					&._right {
+						.arc__circle {
+							right: -15px;
+						}
+					}
+				}
+
+				.arc__circle {
+					position: absolute;
+					width: 25px;
+					height: 25px;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.leftBrunch {
+			position: absolute;
+			bottom: 286px;
+			right: 4px;
+			width: 170px;
+			height: 4px;
+			background-color: #000;
+
+			.wave {
+				position: absolute;
+				bottom: 0;
+				width: 50px;
+				height: 29px;
+				border: 4px solid #000;
+
+				&._left {
+					left: -50px;
+					border-top-left-radius: 20px;
+					border-bottom-left-radius: 20px;
+					border-right: 0;
+				}
+				&._right {
+					right: -50px;
+					border-top-right-radius: 20px;
+					border-bottom-right-radius: 20px;
+					border-left: 0;
+				}
+				&._top {
+					top: -29px;
+				}
+
+				.wave__topBrunch {
+					position: absolute;
+					bottom: 21px;
+					right: 0;
+					width: 4px;
+					height: 131px;
+					background-color: #000;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,140 @@
+.willow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 366px;
+	height: 842px;
+
+	.rod {
+		position: absolute;
+		bottom: 0;
+		left: 198px;
+		width: 4px;
+		height: 420px;
+		background-color: #000;
+
+		.rod__leftBrunch {
+			position: absolute;
+			bottom: 238px;
+			right: 0;
+			width: 132px;
+			height: 4px;
+			background-color: #000;
+		}
+
+		.rod__rightBrunch {
+			position: absolute;
+			bottom: 110px;
+			width: 96px;
+			height: 4px;
+			background-color: #000;
+		}
+
+		.trunk {
+			position: absolute;
+			width: 4px;
+			height: 424px;
+			background-color: #000;
+
+			&._top {
+				top: -100%;
+			}
+
+			&._left {
+				bottom: 0;
+				left: 0;
+			}
+
+			&._right {
+				bottom: 0;
+				right: 0;
+			}
+
+			.trunk__tail {
+				position: absolute;
+				width: 22px;
+				height: 4px;
+				background-color: #000;
+
+				&._left {
+					right: 0;
+				}
+			}
+
+			.trunk__crownsWrap {
+				position: absolute;
+				width: 72px;
+				height: 316px;
+
+				&._left {
+					top: 45px;
+					right: 0;
+
+					.crown {
+						right: 0;
+						border-radius: 0 0 50% 50% / 0 0 100% 100%;
+					}
+				}
+
+				&._right {
+					top: 33px;
+
+					.crown {
+						border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+
+						@mixin marginNumberMix($number, $marginTop) {
+							&._#{$number} {
+								top: #{$marginTop}px;
+							}
+						}
+						@include marginNumberMix(3, 46);
+						@include marginNumberMix(4, 73);
+						@include marginNumberMix(5, 102);
+						@include marginNumberMix(6, 132);
+						@include marginNumberMix(7, 169);
+						@include marginNumberMix(8, 207);
+						@include marginNumberMix(9, 249);
+						@include marginNumberMix(10, 285);
+					}
+				}
+
+
+				.crown {
+					position: absolute;
+					background-color: #000;
+
+					@mixin crownsSizeMix($number, $marginTop, $width, $height) {
+						&._#{$number} {
+							top: #{$marginTop}px;
+							width: #{$width}px;
+							height: #{$height}px;
+						}
+					}
+					@include crownsSizeMix(1, '', 40, 12);
+					@include crownsSizeMix(2, 23, 44, 12);
+					@include crownsSizeMix(3, 48, 47, 14);
+					@include crownsSizeMix(4, 75, 50, 14);
+					@include crownsSizeMix(5, 105, 54, 15);
+					@include crownsSizeMix(6, 137, 57, 17);
+					@include crownsSizeMix(7, 174, 61, 17);
+					@include crownsSizeMix(8, 214, 64, 19);
+					@include crownsSizeMix(9, 256, 68, 19);
+					@include crownsSizeMix(10, 294, 72, 21);
+
+				}
+			}
+
+			.trunk__basis {
+				position: absolute;
+				bottom: -12px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				background-color: #de162a;
+			}
+		}
+	}
+}

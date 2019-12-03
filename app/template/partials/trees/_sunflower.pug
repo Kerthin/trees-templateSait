@@ -1,0 +1,11 @@
+.sunflower
+	.rod
+		.halo
+			.head
+		mixin brunchsMix(brunchSide, positionNumber)
+			.brunch(class=`_${brunchSide} _position_${positionNumber}`)
+				.sheet._left
+				.sheet._right
+		+brunchsMix('left', '1')
+		+brunchsMix('right', '2')
+		+brunchsMix('left', '3')

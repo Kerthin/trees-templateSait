@@ -1,0 +1,33 @@
+mixin trunksMix(trunkSide, tailSide)
+	.trunk(class=`_${trunkSide}`)
+		.trunk__tail(class=`_${tailSide}`)
+		.trunk__basis
+		.trunk__crownsWrap._left
+			.crown._1
+			.crown._2
+			.crown._3
+			.crown._4
+			.crown._5
+			.crown._6
+			.crown._7
+			.crown._8
+			.crown._9
+			.crown._10
+		.trunk__crownsWrap._right
+			.crown._1
+			.crown._2
+			.crown._3
+			.crown._4
+			.crown._5
+			.crown._6
+			.crown._7
+			.crown._8
+			.crown._9
+			.crown._10
+.willow
+	.rod
+		+trunksMix('top', 'left')
+		.rod__leftBrunch
+			+trunksMix('left', '')
+		.rod__rightBrunch
+			+trunksMix('right', '')

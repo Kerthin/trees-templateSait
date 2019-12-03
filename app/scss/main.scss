@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+$itemBgPath : "../image/trees";
+
+._bg_black {
+	background-color: #000;
+}
+._bg_red {
+	background-color: #de162a;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #f1eee2;
+	transition: 1s;
+
+	@mixin treeChoseNameMix($treeName) {
+		&._#{$treeName} {
+			.#{$treeName} {
+				display: block;
+			}
+		}
+	}
+
+	@include treeChoseNameMix(seedling);
+	@include treeChoseNameMix(sepal);
+	@include treeChoseNameMix(linden);
+	@include treeChoseNameMix(pine);
+	@include treeChoseNameMix(palm);
+	@include treeChoseNameMix(fir);
+	@include treeChoseNameMix(rose);
+	@include treeChoseNameMix(willow);
+	@include treeChoseNameMix(sunflower);
+	@include treeChoseNameMix(bell);
+	@include treeChoseNameMix(poplar);
+
+	.seedling,
+	.sepal,
+	.linden,
+	.pine,
+	.palm,
+	.fir,
+	.rose,
+	.willow,
+	.sunflower,
+	.bell,
+	.poplar {
+		display: none;
+	}
+
+	&.popup {
+		transform: scale(.9);
+	}
+
+	@import 'menu/menu.scss';
+	@import 'menu/burger.scss';
+
+	@import 'trees/seedling.scss';
+	@import 'trees/sepal.scss';
+	@import 'trees/linden.scss';
+	@import 'trees/pine.scss';
+	@import 'trees/palm.scss';
+	@import 'trees/fir.scss';
+	@import 'trees/rose.scss';
+	@import 'trees/willow.scss';
+	@import 'trees/sunflower.scss';
+	@import 'trees/bell.scss';
+	@import 'trees/poplar.scss';
+
+}

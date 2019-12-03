@@ -1,0 +1,134 @@
+.seedling {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 470px;
+	height: 816px;
+	overflow: hidden;
+
+	.rod {
+		position: relative;
+		margin: 0 auto;
+		width: 4px;
+		height: 100%;
+		background-color: #000;
+
+		.basis {
+			position: absolute;
+			height: 324px;
+			bottom: 54px;
+			border: 2px #000;
+			z-index: 2;
+		}
+		._bs_dash {
+			border-style: dashed;
+		}
+		._bs_dot {
+			border-style: dotted;
+		}
+		._bs_solid {
+			border-style: solid;
+		}
+
+		.legs {
+			position: absolute;
+			bottom: -35px;
+			left: -34px;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			border: 4px solid #000;
+		}
+
+		.circle {
+			position: absolute;
+			border-radius: 50%;
+		}
+		._bCircle {
+			left: -20.5px;
+			width: 43px;
+			height: 43px;
+		}
+		._xl {
+			left: -26.5px;
+			width: 55px;
+			height: 55px;
+		}
+		._xl_margin {
+			bottom: 446px;
+		}
+
+		._left {
+			border-right: 0;
+		}
+		._right {
+			border-left: 0;
+		}
+
+		@mixin sideItemMix($numberItem, $circleSize, $borderRadius) {
+			._left_#{$numberItem} {
+				width: #{$circleSize}px;
+				left: -#{$circleSize}px;
+				border-bottom-left-radius: #{$borderRadius}px 100%;
+				border-top-left-radius: #{$borderRadius}px 100%;
+			}
+			._right_#{$numberItem} {
+				width: #{$circleSize}px;
+				right: -#{$circleSize}px;
+				border-bottom-right-radius: #{$borderRadius}px 100%;
+				border-top-right-radius: #{$borderRadius}px 100%;
+			}
+		}
+		@include sideItemMix(1, 50, 105);
+		@include sideItemMix(2, 60, 125);
+		@include sideItemMix(3, 70, 145);
+		@include sideItemMix(4, 80, 165);
+		@include sideItemMix(5, 90, 185);
+		@include sideItemMix(6, 100, 205);
+		@include sideItemMix(7, 110, 225);
+		@include sideItemMix(8, 120, 245);
+
+		@mixin circleBrunchMix($sizeItem, $brunchName, $marginCircle, $circleSize, $bottomMargin) {
+			._#{$sizeItem}_#{$brunchName} {
+				left: #{$marginCircle}px;
+				width: #{$circleSize}px;
+				height: #{$circleSize}px;
+				bottom: #{$bottomMargin}px;
+			}
+		}
+		@include circleBrunchMix(xl, arc, -8.5, 48, 536);
+		@include circleBrunchMix(lg, arc, 23, 40, 616);
+		@include circleBrunchMix(xm, arc, 60, 34, 683);
+		@include circleBrunchMix(md, arc, 104, 26, 735);
+		@include circleBrunchMix(sm, arc, 153, 19, 770);
+		@include circleBrunchMix(xs, arc, 209, 12, 787);
+		@include circleBrunchMix(lg, rod, -14, 32, 592);
+		@include circleBrunchMix(md, rod, -12.5, 27, 673);
+		@include circleBrunchMix(sm, rod, -9, 22, 736);
+		@include circleBrunchMix(xs, rod, -7, 18, '');
+
+		@mixin basisCircleMarginMix($numberMargin, $bottomMargin) {
+			._b_circle_margin_#{$numberMargin} {
+				bottom: #{$bottomMargin}px;
+			}
+		}
+		@include basisCircleMarginMix(1, 286.25);
+		@include basisCircleMarginMix(2, 195.5);
+		@include basisCircleMarginMix(3, 102.75);
+	}
+	.arc {
+		position: absolute;
+		left: -46px;
+		top: 300px;
+		width: 778px;
+		height: 220px;
+		border-bottom-left-radius: 400px 230px;
+		border-bottom-right-radius: 400px 230px;
+		border: 4px solid #000;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		border-right-color: transparent;
+		transform: rotate(90deg);
+	}
+}

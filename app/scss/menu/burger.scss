@@ -1,0 +1,50 @@
+.burger {
+	position: absolute;
+	right: 5px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	z-index: 11;
+
+	.burger__input {
+		display: none;
+		outline: none;
+
+		&.checked {
+			+ .strokeWrap {
+				._first,
+				._third {
+					--length: 22.627416998;
+					--offset: -94.1149185097;
+				}
+
+				._second {
+					--length: 0;
+					--offset: -50;
+				}
+			}
+		}
+	}
+
+	.strokeWrap__stroke {
+		fill: none;
+		stroke: #000;
+		stroke-width: 3;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		--length: 24;
+		--offset: -38;
+		stroke-dasharray: var(--length) var(--total-length);
+		stroke-dashoffset: var(--offset);
+		transition: all .8s cubic-bezier(.645, .045, .355, 1);
+
+		&._first,
+		&._third {
+			--total-length: 126.64183044433594;
+		}
+
+		&._second {
+			--total-length: 70;
+		}
+	}
+}
