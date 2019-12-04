@@ -58,42 +58,15 @@ The following technologies were used to create this project:
 
 <h3 align="center">Libraries</h3>
 
-<!--Libraries-->
-<p align="center">
-  <a href="#">
-    <img width="260px" src="READMEimage/jquery-1.svg">
-  </a>
-</p>
-<!--Libraries end-->
-
 <h3 align="center">Package manager</h4>
 
 <!--Package manager-->
 <p align="center">
   <a href="#">
-    <img width="144px" src="READMEimage/bower.svg">
-  </a>
-  <a href="#">
     <img width="144px" src="READMEimage/npm.svg">
   </a>
 </p>
 <!--Package manager end-->
-
-<h3 align="center">Languages</h4>
-
-<!--Languages-->
-<p align="center">
-  <a href="#">
-    <img width="124px" src="READMEimage/html-5.svg">
-  </a>
-  <a href="#">
-    <img width="124px" src="READMEimage/css-3.svg">
-  </a>
-  <a href="#">
-    <img width="124px" src="READMEimage/javascript.svg">
-  </a>
-</p>
-<!--Languages end-->
 
 ---
 
@@ -199,41 +172,3 @@ To develop the project through gulp, I used the following types of NPM plugins:
   - `webserver` - this command is run through the console by writing it `gulp webserver`. This command is used to start the local web server;
   - `clean` - this command is run through the console by writing it `gulp clean`. This command is used to clean up the repository;
   - `default` - this command is run through the console by writing it `gulp default`.This command is used to run all tasks at the same time.
-
-## Appearance
-
-The image of the website:
-
-- Gif
-- Desktop
-- Tablet
-- Phone
-
-#### Gif
-
-  - Desktop swiper
-  <a href="#"><img src="READMEimage/deskSwipe.gif" /></a>
-
-  - Icon drag effect
-  <a href="#"><img src="READMEimage/iconDragEffect.gif" /></a>
-
-  - Background image choise
-  <a href="#"><img src="READMEimage/bgImgChoise.gif" /></a>
-
-  - Open app animation
-  <a href="#"><img src="READMEimage/appLinks.gif" /></a>
-
-  - Fullscreen buttons
-  <a href="#"><img src="READMEimage/fullscreenButtons.gif" /></a>
-
-  - Delete app name
-  <a href="#"><img src="READMEimage/deleteAppName.gif" /></a>
-
-#### Desktop
-<a href="#"><img src="READMEimage/webOSDesktop.png" /></a>
-
-#### Tablet
-<a href="#"><img src="READMEimage/webOSTablet.png" /></a>
-
-#### Phone
-<a href="#"><img src="READMEimage/webOSPhone.png" /></a>
