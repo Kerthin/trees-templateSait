@@ -132,3 +132,40 @@
 		transform: rotate(90deg);
 	}
 }
+
+@media screen and (orientation: landscape) and (max-height: 846px) {
+	.seedling {
+		transform: translate(-50%, -50%) scale(.8);
+	}
+}
+@media screen and (orientation: landscape) and (max-height: 682px) {
+	.seedling {
+		transform: translate(-50%, -50%) scale(.6);
+	}
+}
+@media screen and (orientation: landscape) and (max-height: 520px) {
+	.seedling {
+		transform: translate(-50%, -50%) scale(.4);
+	}
+}
+@media screen and (orientation: landscape) and (max-height: 356px) {
+	.seedling {
+		transform: translate(-50%, -50%) scale(.2);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.seedling {
+		transform: translate(-50%, -50%) scale(.8);
+	}
+}
+@media screen and (max-width: 375px) {
+	.seedling {
+		transform: translate(-50%, -50%) scale(.6);
+	}
+}
+@media screen and (max-width: 320px) {
+	.seedling {
+		transform: translate(-50%, -50%) scale(.5);
+	}
+}

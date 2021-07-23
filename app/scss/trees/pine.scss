@@ -175,3 +175,40 @@
 		}
 	}
 }
+
+@media screen and (orientation: landscape) and (max-height: 914px) {
+	.pine {
+		transform: translate(-50%, -50%) scale(.8);
+	}
+}
+@media screen and (orientation: landscape) and (max-height: 737px) {
+	.pine {
+		transform: translate(-50%, -50%) scale(.6);
+	}
+}
+@media screen and (orientation: landscape) and (max-height: 550px) {
+	.pine {
+		transform: translate(-50%, -50%) scale(.4);
+	}
+}
+@media screen and (orientation: landscape) and (max-height: 406px) {
+	.pine {
+		transform: translate(-50%, -50%) scale(.2);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.pine {
+		transform: translate(-50%, -50%) scale(.7);
+	}
+}
+@media screen and (max-width: 375px) {
+	.pine {
+		transform: translate(-50%, -50%) scale(.6);
+	}
+}
+@media screen and (max-width: 320px) {
+	.pine {
+		transform: translate(-50%, -50%) scale(.5);
+	}
+}
